@@ -195,6 +195,14 @@ def scatter_2d(component1, component2, label= None, colorscale = 'Rainbow',shows
     
     return fig
 
+def scatter_2d_2(xAxis,yAxis,pointSize = 10):
+    import matplotlib.pyplot as plt
+    plt.figure('Scatterplot sorted')
+    plt.scatter(xAxis, yAxis, s= pointSize)
+    plt.xlabel('Observation k')
+    plt.ylabel('Observation k+1')
+    return plt
+
 def scatter_3d(component1,component2,component3,label=None, colorscale = 'Rainbow',showscale = True, width= 900,height=600,template = 'plotly_dark'):
     import plotly.graph_objects as go
     fig = go.Figure(data=[go.Scatter3d(
