@@ -175,7 +175,7 @@ def hist2(data,bins=10):
     fig = px.histogram(data,nbins=bins)
     fig.show()
 
-def scatter_2d(component1, component2, label= None, colorscale = 'Rainbow',showscale = True, width= 800,height=800,template = 'plotly_dark'):
+def scatter_2d(component1, component2, label= None, colorscale = 'Inferno' ,showscale = True, width= 800,height=800,template = 'plotly_white'):
     import plotly.graph_objects as go
     fig = go.Figure(data=go.Scatter(
         x = component1,
@@ -203,7 +203,7 @@ def scatter_2d_2(xAxis,yAxis,pointSize = 10):
     plt.ylabel('Observation k+1')
     return plt
 
-def scatter_3d(component1,component2,component3,label=None, colorscale = 'Rainbow',showscale = True, width= 900,height=600,template = 'plotly_dark'):
+def scatter_3d(component1,component2,component3,label=None, colorscale = 'Inferno',showscale = True, width= 900,height=600,template = 'plotly_white'):
     import plotly.graph_objects as go
     fig = go.Figure(data=[go.Scatter3d(
         x=component1,
